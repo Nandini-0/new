@@ -4,7 +4,7 @@ from fastai.vision.widgets import *
 #from fastai.vision import image
 from tensorflow.keras.preprocessing import image
 import pickle
-from cv2 import cv2
+import cv2
 import numpy as np
 from PIL import Image
 import pandas as pd
