@@ -22,14 +22,14 @@ labels['image'] = labels['image'] + '.jpg'
 labels['label_cat'] = labels['label'].astype(str)
 label_df = labels[['image', 'label_cat']]
 
-def get_x(r): return 'images_compressed/'+r['image'] # create path to open images in the original folder
-def get_y(r): return r['label_cat'].split(' ') # split the labels using space as a delimitter
+#def get_x(r): return 'images_compressed/'+r['image'] # create path to open images in the original folder
+#def get_y(r): return r['label_cat'].split(' ') # split the labels using space as a delimitter
 
 # Create DataBlock
-dblock = DataBlock(blocks = (ImageBlock, MultiCategoryBlock),
-                  get_x = get_x, get_y = get_y,
-                  item_tfms = RandomResizedCrop(128, min_scale=0.35))  # ensure every item is of the same size
-dls = dblock.dataloaders(label_df)
+#dblock = DataBlock(blocks = (ImageBlock, MultiCategoryBlock),
+#                  get_x = get_x, get_y = get_y,
+#                  item_tfms = RandomResizedCrop(128, min_scale=0.35))  # ensure every item is of the same size
+#dls = dblock.dataloaders(label_df)
 
 m1 = load_learner("export.pkl",'rb')
 
