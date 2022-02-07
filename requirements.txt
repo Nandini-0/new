@@ -5,7 +5,7 @@ keras==2.7.0
 Keras-Preprocessing==1.1.2
 matplotlib
 numpy
-opencv-python==4.5.5.62
+opencv-python-headless==4.5.3.56
 pandas
 Pillow==8.4.0
 python-resize-image==1.1.20
