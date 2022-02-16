@@ -22,8 +22,9 @@ labels['image'] = labels['image'] + '.jpg'
 labels['label_cat'] = labels['label'].astype(str)
 label_df = labels[['image', 'label_cat']]
 
-with open('dls.pkl','rb') as f:
-    get_x = pickle.load(f)
+#with open('dls.pkl','rb') as f:get_x = pickle.load(f)
+
+get_x = open('dls.pkl','rb')
 
 #def get_x(r): return 'images_compressed/'+r['image'] # create path to open images in the original folder
 #def get_y(r): return r['label_cat'].split(' ') # split the labels using space as a delimitter
